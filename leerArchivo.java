@@ -7,7 +7,7 @@ import java.util.Map;
 public class leerArchivo {
     public static void main(String[] args) {
         String documento = "https://raw.githubusercontent.com/annyie681/Base_de_Datos_I/main/codigos_postales_hmo.csv";
-        Map<Integer, Integer> codigosPostalesUnicos = new TreeMap<>(); // creo un Map que es una estructura de datos ue
+        Map<Integer, Integer> codigosPostalesUnicos = new TreeMap<>(); // creo un Map que es una estructura de datos que
                                                                        // almacena pares de clave-valor
         try {
             URL direccionURL = new URL(documento); // Convierto el String "documento" a una dirección URL
@@ -33,7 +33,7 @@ public class leerArchivo {
                     int codigoPostal = Integer.parseInt(CP); // convierto los codigos postales a int
 
                     codigosPostalesUnicos.put(codigoPostal, codigosPostalesUnicos.getOrDefault(codigoPostal, 0) + 1);
-                    // getOrDefault(codigoPostal, 0) busca el valor actual (cuenta) asociado a
+                    // getOrDefault(codigoPostal, 0) busca el valor actual asociado a
                     // codigoPostal.
                     // Si no existe (es la primera vez que aparece), devuelve 0.
                     // Luego le suma 1 para indicar que se encontró otra vez ese código postal.
